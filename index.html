@@ -3,127 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KenyaAfrica WorkFinder</title>
+    <title>KenyaAfrica | Global Job Hub</title>
     <style>
-        /* BOLD MODERN STYLES */
-        body { 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            line-height: 1.6; 
-            color: #1a1a1a; 
-            max-width: 900px; 
-            margin: 0 auto; 
-            padding: 15px; 
-            background-color: #e9ecef; 
-        }
-        
-        /* HUGE EYE-CATCHING HEADER */
-        .header { 
-            text-align: center; 
-            background: linear-gradient(135deg, #0056b3 0%, #003d80 100%); 
-            color: white; 
-            padding: 50px 20px; 
-            border-radius: 20px; 
-            margin-bottom: 30px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        .header h1 { 
-            font-size: 3rem; 
-            margin: 0; 
-            text-transform: uppercase; 
-            letter-spacing: 2px;
-        }
-        .header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
-
-        /* BOLD SAFETY BOX */
-        .safety-box { 
-            background: #fff3cd; 
-            border: 4px solid #ffc107; 
-            padding: 25px; 
-            border-radius: 15px; 
-            margin-bottom: 30px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .safety-box h2 { color: #856404; margin-top: 0; font-size: 1.5rem; }
-        .safety-box li { margin-bottom: 10px; font-weight: bold; }
-
-        /* LARGE JOB CARDS */
-        .job-card { 
-            background: white; 
-            padding: 30px; 
-            margin-bottom: 20px; 
-            border-radius: 15px; 
-            border-left: 10px solid #28a745; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        .job-card:hover { transform: scale(1.02); }
-        .job-card h3 { font-size: 1.8rem; margin: 0 0 10px 0; color: #0056b3; }
-        .job-card p { font-size: 1.1rem; color: #555; }
-
-        /* BIG BUTTONS FOR PHONES */
-        .btn { 
-            display: inline-block; 
-            background: #28a745; 
-            color: white; 
-            padding: 15px 35px; 
-            text-decoration: none; 
-            border-radius: 10px; 
-            font-size: 1.2rem; 
-            font-weight: bold; 
-            margin-top: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .btn:hover { background: #218838; }
-
-        .m-pesa-tag { 
-            background: #e8f5e9; 
-            color: #2e7d32; 
-            padding: 5px 12px; 
-            border-radius: 5px; 
-            font-weight: bold; 
-            font-size: 0.9rem; 
-        }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #1a1a1a; max-width: 1000px; margin: 0 auto; padding: 15px; background-color: #f0f4f8; }
+        .header { text-align: center; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 60px 20px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+        .header h1 { font-size: 3rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .safety-box { background: #fff3cd; border: 4px solid #ffc107; padding: 25px; border-radius: 15px; margin-bottom: 35px; }
+        .section-header { font-size: 1.8rem; color: #1e3c72; border-left: 10px solid #1e3c72; padding-left: 15px; margin: 40px 0 20px 0; background: white; padding: 10px; border-radius: 0 10px 10px 0; }
+        .job-card { background: white; padding: 30px; margin-bottom: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; position: relative; }
+        .job-card h3 { font-size: 1.8rem; margin: 10px 0; color: #1e3c72; }
+        .btn { display: inline-block; background: #28a745; color: white; padding: 15px 35px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 1.1rem; margin-top: 15px; }
+        .skill-btn { background: #6f42c1; }
+        .tag { background: #e2e8f0; color: #475569; padding: 5px 10px; border-radius: 5px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>🇰🇪 KenyaAfrica</h1>
-        <p>THE #1 HUB FOR GUARANTEED ONLINE JOBS</p>
+        <h1>🌍 KENYAAFRICA</h1>
+        <p>Verified Online Work • No Scams • Global Opportunities</p>
     </div>
 
     <div class="safety-box">
-        <h2>⚠️ STOP! READ BEFORE APPLYING</h2>
-        <ul>
-            <li>DO NOT PAY any "registration fees" (300/- , 500/-). It is a SCAM!</li>
-            <li>Real employers will never ask for your M-PESA PIN.</li>
-            <li>We only list verified sites that actually pay.</li>
+        <h2 style="margin-top:0; color: #856404;">⚠️ TRUST & SAFETY FIRST</h2>
+        <ul style="font-size: 1.1rem; font-weight: bold;">
+            <li>100% FREE: We never list jobs that ask you for money to join.</li>
+            <li>VERIFIED: These sites work for people living in Kenya.</li>
+            <li>M-PESA SECURE: Never give out your M-Pesa PIN for a "job offer."</li>
         </ul>
     </div>
 
+    <div class="section-header">⭐ Type 1: Jobs for Anyone (No Skills)</div>
+    
     <div class="job-card">
-        <span class="m-pesa-tag">PAYS VIA M-PESA</span>
-        <h3>Mobiworkx Kenya</h3>
-        <p>Earn cash and airtime by answering simple questions on your phone. Perfect for quick daily earnings.</p>
-        <a href="https://www.mobiworkx.com/" class="btn" target="_blank">GET STARTED NOW →</a>
+        <span class="tag">Global Tasks</span>
+        <h3>SproutGigs</h3>
+        <p>Earn dollars ($) by completing small tasks like following accounts or testing websites. Very reliable in Kenya.</p>
+        <a href="https://sproutgigs.com/" class="btn" target="_blank">Start Working →</a>
     </div>
 
     <div class="job-card">
-        <span class="m-pesa-tag">DOLLAR EARNINGS</span>
-        <h3>SproutGigs Tasks</h3>
-        <p>Get paid for small digital tasks like liking pages or following accounts. No specialized skills needed!</p>
-        <a href="https://sproutgigs.com/" class="btn" target="_blank">START TASKS →</a>
+        <span class="tag">Surveys & Airtime</span>
+        <h3>GeoPoll</h3>
+        <p>The #1 survey app for Kenyans. Get paid in Airtime or M-Pesa. It works on Safaricom and Airtel.</p>
+        <a href="https://www.geopoll.com/community/" class="btn" target="_blank">Join Community →</a>
     </div>
 
     <div class="job-card">
-        <span class="m-pesa-tag">GOVT VERIFIED</span>
-        <h3>Kujia TechJobs</h3>
-        <p>Official Kenyan portal for digital work. Safest way to find long-term remote opportunities.</p>
-        <a href="https://kujia.or.ke/techjobs/" class="btn" target="_blank">BROWSE JOBS →</a>
+        <span class="tag">Micro-Tasks</span>
+        <h3>Toloka AI</h3>
+        <p>Complete small tasks like labeling photos to help train AI. You can withdraw your earnings to PayPal or Payoneer.</p>
+        <a href="https://toloka.ai/tolokers/" class="btn" target="_blank">View Tasks →</a>
+    </div>
+
+    <div class="section-header">🚀 Type 2: Skilled Professional Jobs</div>
+    
+    <div class="job-card">
+        <span class="tag">Local Freelancing</span>
+        <h3>WorkKE (East Africa)</h3>
+        <p>A marketplace made specifically for Kenya. Find local clients looking for writers, coders, and virtual assistants.</p>
+        <a href="https://www.workke.co.ke/" class="btn skill-btn" target="_blank">Find Freelance Gigs →</a>
+    </div>
+
+    <div class="job-card">
+        <span class="tag">Writing & Tech</span>
+        <h3>Upwork</h3>
+        <p>The world's largest freelance site. If you have skills in IT or Design, this is where you earn the most.</p>
+        <a href="https://www.upwork.com/" class="btn skill-btn" target="_blank">Browse Skilled Jobs →</a>
     </div>
 
     <footer style="text-align: center; margin-top: 50px; color: #777;">
-        <p>© 2026 KenyaAfrica IT Solutions | Nairobi, Kenya</p>
+        <p>© 2026 KenyaAfrica Global Solutions | Nairobi, Kenya</p>
     </footer>
 
 </body>
