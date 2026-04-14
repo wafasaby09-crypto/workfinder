@@ -3,112 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 Global Jobs Hub 🔥</title>
+<title>Legit Jobs Hub</title>
+
 <style>
-body { margin:0; font-family: Arial,sans-serif; background:#f4f6f8; }
-header { background:#0a66c2; color:white; padding:20px; text-align:center; }
-header h1 { margin:0; font-size:28px; }
-header p { margin:5px 0 0 0; font-size:14px; }
-nav { display:flex; justify-content:center; gap:20px; background:#083d77; padding:10px; }
-nav a { color:white; text-decoration:none; font-weight:bold; }
-.safety { background:#ffe5e5; color:#a00; text-align:center; padding:15px; font-weight:bold; }
-.search-box { text-align:center; margin:20px; }
-.search-box input { width:70%; padding:10px; border-radius:8px; border:1px solid #ccc; }
-.categories { display:grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap:15px; padding:20px; }
-.category { background:white; padding:20px; border-radius:12px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1); cursor:pointer; }
-.jobs { padding:20px; }
-.job-card { background:white; padding:15px; margin-bottom:15px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-.job-card h3 { margin:0; }
-.job-card p { margin:5px 0; color:#555; }
-.badge { display:inline-block; padding:5px 10px; border-radius:6px; font-size:12px; margin-right:5px; }
-.verified { background:#d4edda; color:#155724; }
-.free { background:#cce5ff; color:#004085; }
-.remote { background:#fff3cd; color:#856404; }
-button { padding:8px 12px; border:none; background:#0a66c2; color:white; border-radius:6px; cursor:pointer; }
-footer { text-align:center; padding:20px; background:#083d77; color:white; margin-top:20px; }
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+/* Top Warning */
+.warning {
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Header */
+header {
+    background: #111;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Login */
+.login-box {
+    text-align: center;
+    margin: 20px;
+}
+
+.login-box button {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+}
+
+.google {
+    background: #4285F4;
+    color: white;
+}
+
+.email {
+    background: black;
+    color: white;
+}
+
+/* Search */
+.search {
+    text-align: center;
+    margin: 20px;
+}
+
+.search input {
+    width: 80%;
+    padding: 10px;
+}
+
+/* Jobs */
+.jobs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.job {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.tag {
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.free { background: green; color: white; }
+.connects { background: orange; color: white; }
+
+.apply {
+    display: block;
+    margin-top: 10px;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
 </style>
 </head>
+
 <body>
 
+<div class="warning">
+⚠️ We only post verified jobs. NEVER pay money via M-Pesa to get a job.
+</div>
+
 <header>
-<h1>🔥 Global Jobs Hub 🔥</h1>
-<p>Find jobs worldwide accessible in Kenya & Africa — 100% Free, No Scams</p>
+<h2>Legit Jobs Hub 🌍</h2>
 </header>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Jobs</a>
-<a href="#">Contact</a>
-</nav>
-
-<div class="safety">
-⚠️ SAFETY NOTICE: All jobs listed here are FREE. Never pay anyone for a job. If asked, it’s a SCAM!
+<div class="login-box">
+<button class="google">Login with Google</button><br>
+<button class="email">Login with Email</button>
 </div>
 
-<div class="search-box">
-<input type="text" id="search" placeholder="Search jobs (e.g., remote, nurse, online...)" onkeyup="searchJobs()">
+<div class="search">
+<input type="text" id="searchInput" placeholder="Search jobs...">
 </div>
 
-<div class="categories">
-<div class="category">💻 Online Jobs</div>
-<div class="category">🧠 Skilled Jobs</div>
-<div class="category">🏥 Service Jobs</div>
-<div class="category">🌍 Remote Global</div>
+<div class="jobs" id="jobList">
+
+<div class="job">
+<h3>Content Writer</h3>
+<p>Remote | $10/article</p>
+<span class="tag free">FREE</span>
+<a href="#" class="apply">Apply</a>
 </div>
 
-<div class="jobs" id="jobList"></div>
+<div class="job">
+<h3>Virtual Assistant</h3>
+<p>Remote | $5/hr</p>
+<span class="tag connects">CONNECTS</span>
+<a href="#" class="apply">Apply</a>
+</div>
 
-<footer>
-<p>© 2026 Global Jobs Hub | Jobs from Kenya, Africa & Worldwide</p>
-</footer>
+<div class="job">
+<h3>Data Entry Clerk</h3>
+<p>Remote | $4/hr</p>
+<span class="tag free">FREE</span>
+<a href="#" class="apply">Apply</a>
+</div>
+
+</div>
 
 <script>
-const jobs = [
-  {title:"Data Entry", company:"Clickworker", location:"Global", link:"https://www.clickworker.com", type:"Online"},
-  {title:"Micro Tasks", company:"Microworkers", location:"Global", link:"https://www.microworkers.com", type:"Online"},
-  {title:"Transcription", company:"Rev", location:"Global", link:"https://www.rev.com", type:"Online"},
-  {title:"Freelance Writing", company:"Upwork", location:"Global", link:"https://www.upwork.com", type:"Skilled"},
-  {title:"Graphic Design", company:"Fiverr", location:"Global", link:"https://www.fiverr.com", type:"Skilled"},
-  {title:"Customer Support", company:"Amazon Jobs", location:"Remote", link:"https://www.amazon.jobs", type:"Skilled"},
-  {title:"Shopify Support", company:"Shopify", location:"Remote", link:"https://www.shopify.com/careers", type:"Skilled"},
-  {title:"Home Nurse", company:"Care.com", location:"Global", link:"https://www.care.com", type:"Service"},
-  {title:"Babysitting", company:"Care.com", location:"Global", link:"https://www.care.com", type:"Service"},
-  {title:"Cleaning Services", company:"TaskRabbit", location:"Global", link:"https://www.taskrabbit.com", type:"Service"},
-  {title:"Delivery Driver", company:"Uber", location:"Kenya", link:"https://www.uber.com", type:"Service"},
-  {title:"Food Delivery", company:"Glovo", location:"Kenya", link:"https://glovoapp.com", type:"Service"},
-  {title:"Online Tutoring", company:"Preply", location:"Global", link:"https://preply.com", type:"Online"},
-  {title:"Virtual Assistant", company:"Time Etc", location:"Global", link:"https://www.timeetc.com", type:"Online"},
-];
+// Search Function
+document.getElementById("searchInput").addEventListener("keyup", function() {
+    let filter = this.value.toLowerCase();
+    let jobs = document.querySelectorAll(".job");
 
-function displayJobs(list){
-  const container = document.getElementById("jobList");
-  container.innerHTML = "";
-  list.forEach(job => {
-    container.innerHTML += `
-      <div class="job-card">
-        <h3>${job.title}</h3>
-        <p>${job.company} - ${job.location}</p>
-        <span class="badge verified">Verified</span>
-        <span class="badge free">No Payment</span>
-        <span class="badge remote">Remote</span>
-        <br><br>
-        <button onclick="window.open('${job.link}','_blank')">Apply</button>
-      </div>
-    `;
-  });
-}
-
-function searchJobs(){
-  const input = document.getElementById("search").value.toLowerCase();
-  const filtered = jobs.filter(job =>
-    job.title.toLowerCase().includes(input) ||
-    job.company.toLowerCase().includes(input) ||
-    job.location.toLowerCase().includes(input)
-  );
-  displayJobs(filtered);
-}
-
-displayJobs(jobs);
+    jobs.forEach(job => {
+        let text = job.innerText.toLowerCase();
+        job.style.display = text.includes(filter) ? "block" : "none";
+    });
+});
 </script>
 
 </body>
